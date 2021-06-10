@@ -3,9 +3,10 @@ module.exports = {
   collectCoverageFrom: ['**/*.{ts,tsx}', '!next-env.d.ts'],
   globals: {
     'ts-jest': {
-      tsConfig: 'tsconfig.test.json',
+      tsconfig: 'tsconfig.test.json',
     },
   },
   preset: 'ts-jest',
   setupFilesAfterEnv: ['<rootDir>/setupTests.ts'],
+  testEnvironment: 'jsdom',
 }
